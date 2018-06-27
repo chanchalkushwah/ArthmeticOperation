@@ -17,14 +17,37 @@ public class Arthmetic_operation {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        int a,b,result;
-        Scanner sc=new Scanner(System.in);
-        System.out.println("enter the value of a and b:\n");
-        a=sc.nextInt();
-        b=sc.nextInt();
-        result=a+b;
-        System.out.println("addition of two no is:"+result);
-    }
+        int a,b,operation,result;
+        Scanner sc= new Scanner(System.in);
+        System.out.println("select operation:");
+        operation=sc.next().charAt(0);
+        System.out.println("enter first number:");
+        a= sc.nextInt();
+         System.out.println("enter second number:");
+        b= sc.nextInt();
     
+     switch(operation){
+         case '+':
+                 result=a+b;
+             System.out.println("addition of 2 no is :"+result);
+             break;
+             case '*':
+                 result=a*b;
+                 System.out.println("multiplication of 2 no is :"+result);
+                 break;
+                 case '-':
+                 result=a-b;
+                 System.out.println("subtraction of 2 no is :"+result);
+                 break;
+                     case '/':
+                 result=a/b;
+                 System.out.println("division of 2 no is :"+result);
+                 break;
+                     
+                 default:
+               System.err.println("invalid operation!");
+                     break;
+     }
+  
+    }
 }
